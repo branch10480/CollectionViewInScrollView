@@ -35,6 +35,8 @@ class ViewController: UIViewController {
   
   private func setup() {
     collectionViewHeight.constant = cellSize().height
+    // 自動スクロールの動きを速くする
+    collectionView.decelerationRate = .fast
     collectionView.register(UINib(nibName: String(describing: CollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: CellName.cell)
     
     let layout = CollectionViewFlowLayout()
